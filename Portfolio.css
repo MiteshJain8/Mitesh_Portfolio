@@ -102,15 +102,26 @@ main hr{
     display: flex;
     justify-content:flex-start;
 }
-.verticalLine{
+.verticalLineSkills{
     background-color: blue;
     height: 35.3vw;
     width: 2px;
     margin-left: 12vw;
 }
+.verticalLineExp{
+    background-color: blue;
+    height: 35.3vw;
+    width: 2px;
+    margin-left: 12vw;
+}
+.verticalLineLangs{
+    background-color: blue;
+    height: 49.4vw;
+    width: 2px;
+    margin-left: 12vw;
+}
 .horizontal{
     display: flex;
-    justify-content:space-between;
     align-items: center;
 }
 .horizontalLine{
