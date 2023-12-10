@@ -1,58 +1,90 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --body-background-color: rgb(0, 20, 5);
+    --head-foot-background-color: rgb(25, 40, 0);
+    --head-foot-color: rgb(0, 130, 0);
+    --head-foot-hover: rgb(100, 200, 100);
+    --line: aqua;
+}
+
+.light-mode {
+    --body-background-color: rgb(100, 255, 100);
+    --head-foot-background-color: rgb(150, 255, 0);
+    --head-foot-color: rgb(0, 90, 0);
+    --head-foot-hover: rgb(0, 20, 0);
+    --line: blue;
+}
+
+body {
     font-family: 'Playfair Display', serif;
-    background-color: rgb(100, 255, 100);
+    background-color: var(--body-background-color);
     margin: 0;
 }
-nav{
+
+nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(150, 255, 0);
+    background-color: var(--head-foot-background-color);
     padding: .5rem 0;
 }
-.left{
+
+.left {
     width: 30%;
     font-size: 2.2rem;
-    color: rgb(0, 100, 0);
+    color: var(--head-foot-color);
 }
-.right{
+
+.right {
     width: 60%;
     font-size: 1.2rem;
 
 }
-.right ul{
+
+.right ul {
     display: flex;
     list-style: none;
     justify-content: space-between;
 }
-.right ul li a{
+
+.right ul li a {
     text-decoration: none;
-    color: rgb(0, 90, 0);
+    color: var(--head-foot-color);
 }
-.right ul li a:hover{
-    color: rgb(0, 20, 0);
+
+.right ul li a:hover {
+    color: var(--head-foot-hover);
     text-decoration: underline;
 }
-span{
+
+.leftsect div span {
     color: rgb(0, 100, 0);
 }
-.sect{
+
+.sect {
     display: flex;
     justify-content: space-around;
     margin-top: 3rem;
 }
-.sect div{
+
+.sect div {
     width: 50%;
 }
-.rightsect img{
+
+.rightsect img {
     image-rendering: crisp-edges;
     width: 100%;
 }
-.leftsect{
+
+.leftsect {
     font-size: 3rem;
     padding: .5rem;
     display: flex;
@@ -62,18 +94,22 @@ span{
     text-align: left;
     color: rgb(0, 150, 0);
 }
-.leftsect div{
+
+.leftsect div {
     width: 70%;
 }
-.rightsect{
+
+.rightsect {
     width: 70% !important;
 }
-.btn{
+
+.btn {
     display: flex;
-    justify-content:space-evenly;
-    align-items:center;
+    justify-content: space-evenly;
+    align-items: center;
 }
-.btn button{
+
+.btn button {
     margin: .5rem 0 0 0;
     font-size: 1.3rem;
     border-color: rgb(0, 0, 0);
@@ -82,171 +118,210 @@ span{
     padding: 3px 3px;
     border-radius: 4px;
 }
-.btn button:hover{
+
+.btn button:hover {
     border-color: rgb(255, 255, 255);
 }
-main hr{
+
+main hr {
     margin: 1.5rem 5rem;
-    height: 1px;
+    height: 2px;
     background-color: darkgreen;
 }
-.sect2{
+
+.sect2 {
     margin-top: 1.5rem;
 }
-.sect2 h1{
+
+.sect2 h1 {
     font-size: 1.7rem;
     margin-left: 10vw;
-    color: rgb(0, 100, 0);
+    color: var(--head-foot-color);
 }
-.box{
+
+.box {
     display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
 }
-.verticalLineSkills{
-    background-color: blue;
+
+.verticalLineSkills {
+    background-color: var(--line);
     height: 35.3vw;
     width: 2px;
     margin-left: 12vw;
 }
-.verticalLineExp{
-    background-color: blue;
+
+.verticalLineExp {
+    background-color: var(--line);
     height: 35.3vw;
     width: 2px;
     margin-left: 12vw;
 }
-.verticalLineLangs{
-    background-color: blue;
+
+.verticalLineLangs {
+    background-color: var(--line);
     height: 49.4vw;
     width: 2px;
     margin-left: 12vw;
 }
-.horizontal{
+
+.horizontal {
     display: flex;
     align-items: center;
 }
-.horizontalLine{
-    background-color: rgb(0, 0, 255);
+
+.horizontalLine {
+    background-color: var(--line);
     height: .1vw;
     width: 7vw;
     margin: 7vw 0;
 }
-.spandescript b{
-    padding: 0 1vw ;
+
+.spandescript {
+    color: rgb(0, 150, 0);
+}
+
+.spandescript b {
+    padding: 0 1vw;
     font-size: 1.5rem;
     color: rgb(0, 130, 0);
     width: 15vw;
 }
-.horizontal p{ 
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    font-size: 1.2rem;
-    color: rgb(0, 150, 0);
-    width: 45vw;
-}
-footer{
+
+footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(150, 255, 0);
+    background-color: var(--head-foot-background-color);
     padding: .5rem 0;
 }
-footer div{
-    color: rgb(0, 90, 0);
+
+footer div {
+    color: var(--head-foot-color);
     font-size: 1.2rem;
     margin: .3rem 0;
 }
-.foot1 a{
+
+.foot1 a {
     text-decoration: none;
-    color: rgb(0, 90, 0);
+    color: var(--head-foot-color);
+    transition: 1s ease-in-out;
 }
-.foot1 a:hover{
-    color: rgb(0, 20, 0);
+
+.foot1 a:hover {
+    color: var(--head-foot-hover);
     text-decoration: underline;
 }
+
+.foot1 a:hover span {
+    transform: translateY(-5px);
+}
+
 @media screen and (max-width: 900px) {
-  nav{
-    display: flex;
-    flex-direction: column;
-  }
-  .sect{
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-  .sect div{
-    width: fit-content;
-  }
-  .left{
-    width: fit-content;
-  }
-  .right{
-    width: 100%;
-  }
-  .right ul{
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-  }
-  .leftsect{
-    display: flex;
-    align-items: flex-start;
-  }
-  .btn{
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sect {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .sect div {
+        width: fit-content;
+    }
+
+    .left {
+        width: fit-content;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .right ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+    }
+
+    .leftsect {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .btn {
         width: 60% !important;
-  }
-  .btn button{
+    }
+
+    .btn button {
         font-size: 1.2rem;
     }
-  footer div{
-    font-size: 1.05rem;
-}
-}
-@media screen and (max-width: 570px) {
-    .leftsect{
-    font-size: 2.5rem;
+
+    footer div {
+        font-size: 1.05rem;
     }
-    .horizontal h3{
+}
+
+@media screen and (max-width: 570px) {
+    .leftsect {
+        font-size: 2.5rem;
+    }
+
+    .horizontal h3 {
         display: inline;
         font-size: 1.3rem;
     }
-    .horizontal p{
+
+    .horizontal p {
         display: inline;
         font-size: 1.1rem;
     }
-    .btn{
+
+    .btn {
         width: 70% !important;
     }
-    .btn button{
+
+    .btn button {
         font-size: 1.1rem;
     }
-    footer{
-    display: flex;
-    flex-direction: column;
+
+    footer {
+        display: flex;
+        flex-direction: column;
     }
-    footer div{
+
+    footer div {
         font-size: 1rem;
     }
 }
-    @media screen and (max-width: 400px) {
-    .leftsect{
-    font-size: 2.3rem;
+
+@media screen and (max-width: 400px) {
+    .leftsect {
+        font-size: 2.3rem;
     }
-    .horizontal h3{
+
+    .horizontal h3 {
         display: inline;
         font-size: 1.2rem;
     }
-    .horizontal p{
+
+    .horizontal p {
         display: inline;
         font-size: 0.9rem;
     }
-    .btn{
+
+    .btn {
         width: 80% !important;
     }
-    .btn button{
+
+    .btn button {
         font-size: 1rem;
     }
-    footer div{
+
+    footer div {
         font-size: 0.9rem;
     }
 }
